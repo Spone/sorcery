@@ -1,6 +1,8 @@
 # Changelog
 ## HEAD
 
+* Add a `#login!` helper that raises an exception if the login fails [#332](https://github.com/Sorcery/sorcery/pull/322)
+
 ## 0.16.4
 
 * Adapt to open request protection strategy of rails 7.0 [#318](https://github.com/Sorcery/sorcery/pull/318)
