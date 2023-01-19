@@ -1,6 +1,4 @@
 module Sorcery
-  class InvalidCredentials < StandardError; end
-
   module Controller
     def self.included(klass)
       klass.class_eval do
@@ -68,8 +66,8 @@ module Sorcery
       def login!(*credentials)
         user = login(*credentials)
 
-        raise Sorcery::InvalidCredentials if user.nil?
-        
+        raise Sorcery::Errors::InvalidCredentials if user.nil?
+
         user
       end
 
